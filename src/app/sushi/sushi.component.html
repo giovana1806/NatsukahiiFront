@@ -1,0 +1,17 @@
+<section>
+    <img src="./image(6).png" alt="" class="lado">
+    <div class="blog-container">
+        <div *ngFor="let item of items" class="card">
+            <div class="card-content">
+                <img [src]="item.imageUrl" alt="{{ item.nome }}" class="card-image">
+                <h3>{{ item.nome }}</h3>
+                <p>{{ item.descricao }}</p>
+                <div class="card-footer">
+                    <span>{{ item.preco | currency: 'BRL' }}</span>
+                </div>
+                <a class="comprar" (click)="addToCart(item)">COMPRAR</a>
+            </div>
+        </div>
+    </div>
+    <img src="./image(6).png" alt="" class="lado">
+</section>
